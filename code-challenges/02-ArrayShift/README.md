@@ -13,4 +13,5 @@ Create a function that takes an array and a value, then inserts that value into 
 I believe the effieciency of this will scale 1:1 with the amount of elements in the array passed. 
 
 ## Solution
-![](code-challenges/02-ArrayReverse/assets/02-ArrayShift.jpg)
+
+![](code-challenges/02-ArrayShift/assets/02-ArrayShift.jpg)
