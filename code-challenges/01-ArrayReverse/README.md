@@ -12,5 +12,7 @@ Create a function to take an array, reverse the contents and return the reversed
 
 We iterated through an array backwards and added the element at the current iterations index to a new array at an index determined by an incrementor outside the loop. 
 
+It scales
+
 ## Solution
-![](code-challenges/01-ArrayReverse/01-Whiteboard.jpg)
+![](./01-Whiteboard.jpg)
