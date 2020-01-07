@@ -15,3 +15,5 @@ I believe the effieciency of this will scale 1:1 with the amount of elements in 
 ## Solution
 
 ![](./assets/02-ArrayShift.jpg)
+
+[Code](./arrayShift.js)
