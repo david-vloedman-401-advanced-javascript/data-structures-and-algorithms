@@ -1,16 +1,19 @@
-# Code Challege Array Reverse
+# Code Challege Array Shift
 
-# Reverse an Array
+# Add a value into the middle of an array
 
-Code Challenges for 401. This is the first challenge.
+Code Challenges for 401. This is the second challenge.
 
 ## Challenge
 
-Create a function to take an array, reverse the contents and return the reversed version without using any built-in array methods.
+Create a function that takes an array and a value, then inserts that value into the middle of the array w/o using any built-in array methods.
 
 ## Approach & Efficiency
 
-We iterated through an array backwards and added the element at the current iterations index to a new array at an index determined by an incrementor outside the loop. 
+I believe the effieciency of this will scale 1:1 with the amount of elements in the array passed. 
 
 ## Solution
-![](code-challenges/01-ArrayReverse/01-Whiteboard.jpg)
+
+![](./assets/02-ArrayShift.jpg)
+
+[Code](./arrayShift.js)
