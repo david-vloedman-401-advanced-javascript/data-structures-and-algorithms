@@ -12,7 +12,7 @@ function shiftArray(arr, val) {
   }
 
   outArr[i] = val;
-  i++
+  i++;
 
   while (i <= arr.length) {
     outArr[i] = inArr[i - 1];
