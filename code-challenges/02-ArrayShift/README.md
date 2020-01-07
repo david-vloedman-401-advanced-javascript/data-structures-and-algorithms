@@ -14,4 +14,4 @@ I believe the effieciency of this will scale 1:1 with the amount of elements in 
 
 ## Solution
 
-![](code-challenges/02-ArrayShift/assets/02-ArrayShift.jpg)
+![](./assets/02-ArrayShift.jpg)
