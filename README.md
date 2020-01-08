@@ -8,3 +8,5 @@
 * [01 - Array Reverse](./code-challenges/01-ArrayReverse/)
 
 * [02 - Array Shift](./code-challenges/02-ArrayShift/)
+
+* [03 -Binary Search](./code-challenges/03-BinarySearch/)
