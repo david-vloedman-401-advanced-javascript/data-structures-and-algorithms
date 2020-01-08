@@ -1,19 +1,25 @@
-# Code Challege Array Shift
+# Code Challege Binary Search
 
-# Add a value into the middle of an array
+# Team
 
-Code Challenges for 401. This is the second challenge.
+Myself and Travis Skyles
+
+# Create a binary search function
+
+Code Challenges for 401. This is the third challenge. A binary search is a function that finds the index of a given value withing a sorted array by cutting it's potential indexes in half each time a comparison is made.
 
 ## Challenge
 
-Create a function that takes an array and a value, then inserts that value into the middle of the array w/o using any built-in array methods.
+Create a function that takes an array and a value. Use a binary search to locate the index of the value within the array. If the value is not within the array, return -1;
 
 ## Approach & Efficiency
 
-I believe the effieciency of this will scale 1:1 with the amount of elements in the array passed. 
+Used a fairly traditional impletmentation of the binary search. 
+
+
 
 ## Solution
 
-![](./assets/02-ArrayShift.jpg)
+![](./assets/03-whiteboard.jpg)
 
-[Code](./arrayShift.js)
+[Code](./binarySearch.js)
