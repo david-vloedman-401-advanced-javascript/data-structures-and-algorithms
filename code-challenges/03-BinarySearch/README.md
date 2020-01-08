@@ -20,6 +20,6 @@ Used a fairly traditional impletmentation of the binary search.
 
 ## Solution
 
-![](./assets/03-whiteboard.jpg)
+![](./assets/whiteboard-03.jpg)
 
 [Code](./binarySearch.js)
