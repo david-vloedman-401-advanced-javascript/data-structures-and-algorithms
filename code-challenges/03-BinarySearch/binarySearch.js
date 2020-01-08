@@ -1,3 +1,8 @@
+/**
+ *  A binary search
+ * @param {array} arr 
+ * @param {number} target 
+ */
 function binarySearch(arr, target) {
   let right = arr.length - 1;
   let left = 0;
