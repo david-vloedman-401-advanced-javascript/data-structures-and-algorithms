@@ -1,9 +1,9 @@
 function binarySearch(arr, target) {
-  let right = Math.round(arr.length) - 1;
+  let right = arr.length - 1;
   let left = 0;
 
   while (left <= right) {
-    let m = Math.floor((left + right) / 2);
+    let m = Math.ceil((left + right) / 2);
 
     if (arr[m] < target) {
       left = m + 1;
