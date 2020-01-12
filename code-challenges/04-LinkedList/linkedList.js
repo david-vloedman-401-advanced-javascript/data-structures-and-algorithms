@@ -38,3 +38,5 @@ class LinkedList {
     return `${listString} -> {NULL}`;
   }
 }
+
+module.exports = LinkedList;
