@@ -10,6 +10,8 @@ Create linked list functionality with three methods:
 - insert(val) : insert a value into the list
 - includes(val) : is given value within the list?
 - toString() : return all the values within the list as a human readable string
+- append()
+-insertBefore()
 
 ## Approach & Efficiency
 

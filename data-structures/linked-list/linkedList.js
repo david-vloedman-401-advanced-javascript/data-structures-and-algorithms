@@ -1,70 +1,105 @@
 'using strict';
-
+/**
+ * @class
+ */
 class Node {
-  constructor(val, nxt) {
+  constructor(val, next) {
     this.val = val;
-    this.nxt = nxt;
+    this.next = next;
   }
 }
-
+/**
+ * @class
+ */
 class LinkedList {
   constructor() {
     this.head = null;
   }
-
+  /**
+ * 
+ * @param val 
+ */
   insert(val) {
     const node = new Node(val);
-    node.nxt = this.head;
+    node.next = this.head;
     this.head = node;
   }
-
+  /**
+ * 
+ * @param val 
+ */
   append(val){
     const node = new Node(val, null);    
     let current = this.head;
     while(current !== null){           
-      if(current.nxt === null){        
-        current.nxt = node;
+      if(current.next === null){        
+        current.next = node;
         break;
       }       
-      current = current.nxt;
+      current = current.next;
     }
     
   }
-
+  /**
+   * 
+   * @param any 
+   * @return bool
+   */
   includes(val) {
     let current = this.head;
     while (current !== null) {
       if (current.val === val) return true;
-      current = current.nxt;
+      current = current.next;
     }
     return false;
   }
-
+  /**
+ *  @return string
+ */
   toString() {
     let listString = '';
     let current = this.head;
 
     while (current !== null) {
       listString = `${listString} -> {${current.val}}`;
-      current = current.nxt;
+      current = current.next;
     }
     return `${listString} -> {NULL}`;
   }
-
-  insertBefore(val, newVal){
-    let current = this.head;
-    const newNode = new Node(newVal, null);
-    while(current !== null){
-      if(current.val === val){        
-        newNode.nxt = current.nxt;
-        current.nxt = newNode;          
+  /**
+ * 
+ * @param  val 
+ * @param  newVal 
+ */
+  insertBefore(val, newValue) {
+    const newNode = new Node(newValue);
+    if(this.head.val === val){
+      newNode.next = this.head;
+      this.head = newNode;      
+    } else {
+      let current = this.head;
+      while (current.next.val !== val) {
+        current = current.next;
       }
-      current = current.nxt;
+      newNode.next = current.next;
+      current.next = newNode;
+    }
+  }
+
+  insertAfter(val, newValue){
+    const newNode = new Node(newValue);
+    let current = this.head;
+    while(current !== null){
+      if(current.val === val){
+        newNode.next = current.next;
+        current.next = newNode;
+      }
+      current = current.next;
     }
   }
 }
 
-// .insertBefore(value, newVal) which add a new node with the given newValue immediately before the first value node
+
 
 module.exports = LinkedList;
 
@@ -76,6 +111,6 @@ myList.insert(3);
 myList.insert(4);
 myList.insert(5);
 
-myList.insertBefore(3, 18);
+myList.insertAfter(1, 18);
 
 console.log(myList.toString());
