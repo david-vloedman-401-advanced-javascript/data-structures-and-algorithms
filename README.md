@@ -11,6 +11,8 @@
 
 * [03 - Binary Search](./code-challenges/03-BinarySearch/)
 
+
 ## Data Structures
 
 * [Linked List](./data-structures/linked-list/)
+
