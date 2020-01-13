@@ -5,11 +5,9 @@ function shiftArray(arr, val) {
 
 
   let i = 0;
-  console.log(middle);
-  while (i < middle) {
-    console.log('in', inArr[i]);
-    outArr[i] = inArr[i];
-    console.log(outArr);
+  
+  while (i < middle) {    
+    outArr[i] = inArr[i];    
     i++;
   }
 
