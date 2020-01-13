@@ -85,7 +85,11 @@ class LinkedList {
       current.next = newNode;
     }
   }
-
+/**
+ * 
+ * @param  val 
+ * @param newValue 
+ */
   insertAfter(val, newValue){
     const newNode = new Node(newValue);
     let current = this.head;
@@ -103,14 +107,3 @@ class LinkedList {
 
 module.exports = LinkedList;
 
-const myList = new LinkedList();
-
-myList.insert(1);
-myList.insert(2);
-myList.insert(3);
-myList.insert(4);
-myList.insert(5);
-
-myList.insertAfter(1, 18);
-
-console.log(myList.toString());

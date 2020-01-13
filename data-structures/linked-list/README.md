@@ -6,12 +6,13 @@ Code Challenges for 401. This is the fourth challenge.
 
 ## Challenge & API
 
-Create linked list functionality with three methods: 
+### Create linked list functionality 
 - insert(val) : insert a value into the list
 - includes(val) : is given value within the list?
 - toString() : return all the values within the list as a human readable string
-- append()
--insertBefore()
+- append() : append a node to the end of the list
+- insertBefore() : insert a node before a specifi node 
+- insertAfter() : insert a node after a specific node
 
 ## Approach & Efficiency
 
