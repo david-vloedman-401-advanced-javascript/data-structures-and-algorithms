@@ -10,15 +10,15 @@ function shiftArray(arr, val) {
     console.log('in', inArr[i]);
     outArr[i] = inArr[i];
     console.log(outArr);
-    i++
+    i++;
   }
 
   outArr[i] = val;
-  i++
+  i++;
 
   while (i <= arr.length) {
     outArr[i] = inArr[i - 1];
-    i++
+    i++;
   }
 
   return outArr;
