@@ -11,8 +11,9 @@ Code Challenges for 401. This is the fourth challenge.
 - includes(val) : is given value within the list?
 - toString() : return all the values within the list as a human readable string
 - append() : append a node to the end of the list
-- insertBefore() : insert a node before a specifi node 
-- insertAfter() : insert a node after a specific node
+- insertBefore(val, newVal) : insert a node before a specifi node 
+- insertAfter(val, newVal) : insert a node after a specific node
+- kthFromEnd(k) : find the value of the node 'k' from the end of the list
 
 ## Approach & Efficiency
 

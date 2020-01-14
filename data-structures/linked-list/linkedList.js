@@ -16,7 +16,7 @@ class LinkedList {
     this.head = null;
   }
   /**
- * 
+ * Inserts a new node on the head of the list
  * @param val 
  */
   insert(val) {
@@ -25,7 +25,7 @@ class LinkedList {
     this.head = node;
   }
   /**
- * 
+ * Appends a new node to the end of the list
  * @param val 
  */
   append(val){
@@ -41,8 +41,8 @@ class LinkedList {
     
   }
   /**
-   * 
-   * @param any 
+   * Checks to see if a node with the given value exists within the list
+   * @param val
    * @return bool
    */
   includes(val) {
@@ -54,6 +54,7 @@ class LinkedList {
     return false;
   }
   /**
+  * Turns the values of each node in the list to a string
  *  @return string
  */
   toString() {
@@ -67,7 +68,7 @@ class LinkedList {
     return `${listString} -> {NULL}`;
   }
   /**
- * 
+ * Inserts a node with the new value after the node that has the given value
  * @param  val 
  * @param  newVal 
  */
@@ -86,7 +87,7 @@ class LinkedList {
     }
   }
   /**
- * 
+ * Inserts a node with the new value after the node with the given value
  * @param  val 
  * @param newValue 
  */
@@ -101,7 +102,36 @@ class LinkedList {
       current = current.next;
     }
   }
+  
+  /**
+ * Returns the value of the node 'k'th from the end
+ * @param  k 
+ * @return value
+ */
+  kthFromTheEnd(k){
+    let current = this.head;
+    const values = [];
+    while(current !== null){
+      values.push(current.val);
+      current = current.next;
+    }
+    
+    if(k > values.length -1 || k < 0) return 'Exception';
+    let index = (values.length - k) -1;    
+    return values[index];
+  }
 }
+
+const testList = new LinkedList();
+
+testList.insert(0);
+testList.insert(1);
+testList.insert(2);
+testList.insert(3);
+testList.insert(4);
+
+console.log(testList.kthFromTheEnd(-5));
+console.log(testList.toString());
 
 
 
