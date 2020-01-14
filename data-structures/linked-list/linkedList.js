@@ -122,18 +122,5 @@ class LinkedList {
   }
 }
 
-const testList = new LinkedList();
-
-testList.insert(0);
-testList.insert(1);
-testList.insert(2);
-testList.insert(3);
-testList.insert(4);
-
-console.log(testList.kthFromTheEnd(-5));
-console.log(testList.toString());
-
-
-
 module.exports = LinkedList;
 
