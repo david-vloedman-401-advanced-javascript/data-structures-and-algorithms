@@ -26,3 +26,28 @@ Each function scales at O(n) for both time and space.
 ## Solution
 
 [Code](./linkedList.js)
+
+### Append 
+
+Domain - Append a node to the end of the linked list
+
+![](./assets/append.jpg)
+
+### Insert Before
+
+Domain - Insert a node before the node with the given value
+
+![](./assets/insertBefore.jpg)
+![](./assets/insertBefore2.jpg)
+
+### Insert After 
+
+Domain - Insert a node after the node with a given value 
+
+![](./assets/insertAfter.jpg)
+
+### Kth from the end
+
+Domain - Get the value of the node 'k'th from the end of the list
+
+![](./assets/kthFromTheEnd.jpg)
