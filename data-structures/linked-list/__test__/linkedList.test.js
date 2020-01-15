@@ -1,7 +1,7 @@
 const LinkedList = require('../linkedList');
 
 describe('Test to ensure the LinkedList class is full functioning', ()=>{
-  const list = new LinkedList();
+  const list = new LinkedList.LinkedList();
 
   it('should instantiate an empty list', ()=> {
     expect(list.head).toBeNull();
@@ -30,7 +30,7 @@ describe('Test to ensure the LinkedList class is full functioning', ()=>{
   });
 
   it('should be able to return a string with all the values in the list', ()=>{
-    const myList = new LinkedList();
+    const myList = new LinkedList.LinkedList();
     myList.insert(1);
     myList.insert(2);
     myList.insert(3);
