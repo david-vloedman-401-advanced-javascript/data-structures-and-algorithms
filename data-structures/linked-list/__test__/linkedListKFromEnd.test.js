@@ -26,7 +26,7 @@ describe('Testing the K From End method of the linked list class', ()=>{
     expect(testList.kthFromTheEnd(-5)).toBe('Exception');
   });
 
-  const oneList = new LinkedList();
+  const oneList = new LinkedList.LinkedList();
   oneList.insert(1);
 
   it('Should return a value when the list contains one and k is 0', ()=>{  
