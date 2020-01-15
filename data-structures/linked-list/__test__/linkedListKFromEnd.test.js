@@ -4,7 +4,7 @@ const LinkedList = require('../linkedList');
 
 describe('Testing the K From End method of the linked list class', ()=>{
 
-  const testList = new LinkedList();
+  const testList = new LinkedList.LinkedList();
 
   testList.insert(0);
   testList.insert(1);

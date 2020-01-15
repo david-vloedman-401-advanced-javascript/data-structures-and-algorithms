@@ -15,6 +15,8 @@ Code Challenges for 401. This is the fourth challenge.
 - insertAfter(val, newVal) : insert a node after a specific node
 - kthFromEnd(k) : find the value of the node 'k' from the end of the list
 
+- GLOBAL - mergeLists(list1, list2) : merges two linked lists into one
+
 ## Approach & Efficiency
 
 I took a pretty standard approach and utilized a lot of the same concepts from the class demo.
@@ -51,3 +53,7 @@ Domain - Insert a node after the node with a given value
 Domain - Get the value of the node 'k'th from the end of the list
 
 ![](./assets/kthFromTheEnd.jpg)
+
+Domain - Merge two lists
+
+![](./assets/mergeList.jpg)

@@ -3,7 +3,7 @@
 const LinkedList = require('../linkedList');
 
 describe('Testing the second set of methods implemented in LinkedList part 2 challenge', () => {
-  const myList = new LinkedList();
+  const myList = new LinkedList.LinkedList();
   
 
   it('should be able to append multiple nodes', ()=> {
