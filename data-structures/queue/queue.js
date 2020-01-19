@@ -17,9 +17,14 @@ class Queue {
    */
   enqueue(val){
     const node = new Node(val);        
-    if(this.isEmpty()) this.front = node;
-    node.next = this.rear;
-    this.rear = node;   
+    if(this.isEmpty()){
+      this.front = node;
+      this.rear = node;      
+      return;
+    }
+    
+    this.rear.next = node;   
+    this.rear = node;
   }
 
   /**
@@ -27,9 +32,10 @@ class Queue {
    * @return val
    */
   dequeue(){
+    console.log(queue);
     const node = this.front;
-    this.front = node.next;
-    node.next = null;
+    this.front = this.front.next;
+    
     return node.val;
   }
 
