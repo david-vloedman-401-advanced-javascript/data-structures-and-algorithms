@@ -1,13 +1,5 @@
 'using strict';
-/**
- * @class
- */
-class Node {
-  constructor(val, next) {
-    this.val = val;
-    this.next = next;
-  }
-}
+const Node = require('../node/node');
 /**
  * @class
  */
