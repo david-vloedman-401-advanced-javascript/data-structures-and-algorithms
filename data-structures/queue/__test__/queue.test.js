@@ -43,11 +43,22 @@ describe('Testing functionality of the stack module', ()=>{
     expect(queue.peek()).toEqual(100);
   });
 
-  it('can successfully empty a queue after multipl dequeues', ()=>{
+  it('can successfully empty a queue after multiple dequeues', ()=>{
+    const queue = new Queue();
+    queue.enqueue(100);
+    queue.enqueue(200);
+    queue.enqueue(300);
 
+    queue.dequeue();
+    queue.dequeue();
+    queue.dequeue();
+    expect(queue.isEmpty()).toBeTruthy();
+    
   });
 
   it('can successfuly instantiate an empty queue', ()=>{
-
+    const queue = new Queue();
+    expect(queue.isEmpty()).toBeTruthy();
+    
   });
 });
