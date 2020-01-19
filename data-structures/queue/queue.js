@@ -32,7 +32,7 @@ class Queue {
    * @return val
    */
   dequeue(){
-    console.log(queue);
+    
     const node = this.front;
     this.front = this.front.next;
     
