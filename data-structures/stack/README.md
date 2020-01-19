@@ -27,3 +27,4 @@ Each function scales at O(n) for both time and space.
 ![](../queue/assets/stack-queue-1.jpg)
 ![](../queue/assets/stack-queue-2.jpg)
 ![](../queue/assets/stack-queue-3.jpg)
+[Code](./stack.js)
