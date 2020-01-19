@@ -16,3 +16,7 @@
 
 * [Linked List](./data-structures/linked-list/)
 
+* [Stack](./data-structures/stack/)
+
+* [Queue](./data-structures/queue/)
+
