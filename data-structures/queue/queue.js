@@ -31,8 +31,7 @@ class Queue {
    * Remove a node from the front of the queue
    * @return val
    */
-  dequeue(){
-    
+  dequeue(){    
     const node = this.front;
     this.front = this.front.next;
     

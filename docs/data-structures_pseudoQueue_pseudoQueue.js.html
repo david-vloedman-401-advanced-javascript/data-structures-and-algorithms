@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Source: data-structures/queue/queue.js</title>
+    <title>JSDoc: Source: data-structures/pseudoQueue/pseudoQueue.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Source: data-structures/queue/queue.js</h1>
+    <h1 class="page-title">Source: data-structures/pseudoQueue/pseudoQueue.js</h1>
 
     
 
@@ -28,63 +28,38 @@
         <article>
             <pre class="prettyprint source linenums"><code>'use strict';
 
-const Node = require('../node/node');
+const Stack = require('../stack/stack');
 /**
- * A class for creating a queue object
  * @class
  */
-class Queue {
+class PseudoQueue {
   constructor(){
-    this.front = null;
-    this.rear = null;
+    this.inbox = new Stack();
+    this.outbox = new Stack();
   }
-
   /**
-   * Add a node to the end of the queue
-   * @param {*} node 
+   * Adds a node to the queue with the give value
+   * @param val 
    */
   enqueue(val){
-    const node = new Node(val);        
-    if(this.isEmpty()){
-      this.front = node;
-      this.rear = node;      
-      return;
+    this.inbox.push(val);
+  }
+  /**
+   * Removes the node from the front of the queue and returns its value
+   * @return val
+   */
+  dequeue(){
+    
+    if(this.outbox.isEmpty()){      
+      while(!this.inbox.isEmpty()){
+        this.outbox.push(this.inbox.pop());
+      }      
     }
-    
-    this.rear.next = node;   
-    this.rear = node;
-  }
-
-  /**
-   * Remove a node from the front of the queue
-   * @return val
-   */
-  dequeue(){    
-    const node = this.front;
-    this.front = this.front.next;
-    
-    return node.val;
-  }
-
-  /**
-   * Returns the value of the node next in queue without changing it's position in the queue
-   * @return val
-   */
-
-  peek(){
-    return this.isEmpty()? null : this.front.val;    
-  }
-
-  /**
-   * Checks to see if the queue is empty
-   * @return bool
-   */
-  isEmpty(){
-    return (this.front === null);
+    return this.outbox.pop();
   }
 }
 
-module.exports = Queue;</code></pre>
+module.exports = PseudoQueue;</code></pre>
         </article>
     </section>
 
