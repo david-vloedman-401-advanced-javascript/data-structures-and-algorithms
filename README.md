@@ -3,6 +3,11 @@
 # Travis-CI 
 [Link](https://www.travis-ci.com/david-vloedman-401-advanced-javascript/data-structures-and-algorithms)
 
+
+# Docs
+
+[JSDoc](./docs/index.html)
+
 ## Table of Contents
 
 * [01 - Array Reverse](./code-challenges/01-ArrayReverse/)
