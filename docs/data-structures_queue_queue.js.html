@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Source: code-challenges/03-BinarySearch/binarySearch.js</title>
+    <title>JSDoc: Source: data-structures/queue/queue.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Source: code-challenges/03-BinarySearch/binarySearch.js</h1>
+    <h1 class="page-title">Source: data-structures/queue/queue.js</h1>
 
     
 
@@ -26,32 +26,66 @@
     
     <section>
         <article>
-            <pre class="prettyprint source linenums"><code>/**
- *  A binary search
- * @param {array} arr 
- * @param {number} target 
+            <pre class="prettyprint source linenums"><code>'use strict';
+
+const Node = require('../node/node');
+/**
+ * A class for creating a queue object
+ * @class
  */
-function binarySearch(arr, target) {
-  let right = arr.length - 1;
-  let left = 0;
-
-  while (left &lt;= right) {
-    let m = Math.ceil((left + right) / 2);
-
-    if (arr[m] &lt; target) {
-      left = m + 1;
-    } else if (arr[m] > target) {
-      right = m - 1;
-    } else {
-      return m;
-    }
+class Queue {
+  constructor(){
+    this.front = null;
+    this.rear = null;
   }
 
-  return -1;
+  /**
+   * Add a node to the end of the queue
+   * @param {*} node 
+   */
+  enqueue(val){
+    const node = new Node(val);        
+    if(this.isEmpty()){
+      this.front = node;
+      this.rear = node;      
+      return;
+    }
+    
+    this.rear.next = node;   
+    this.rear = node;
+  }
+
+  /**
+   * Remove a node from the front of the queue
+   * @return val
+   */
+  dequeue(){
+    
+    const node = this.front;
+    this.front = this.front.next;
+    
+    return node.val;
+  }
+
+  /**
+   * Returns the value of the node next in queue without changing it's position in the queue
+   * @return val
+   */
+
+  peek(){
+    return this.isEmpty()? null : this.front.val;    
+  }
+
+  /**
+   * Checks to see if the queue is empty
+   * @return bool
+   */
+  isEmpty(){
+    return (this.front === null);
+  }
 }
 
-module.exports = binarySearch;
-</code></pre>
+module.exports = Queue;</code></pre>
         </article>
     </section>
 

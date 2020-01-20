@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Source: code-challenges/03-BinarySearch/binarySearch.js</title>
+    <title>JSDoc: Source: data-structures/stack/stack.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Source: code-challenges/03-BinarySearch/binarySearch.js</h1>
+    <h1 class="page-title">Source: data-structures/stack/stack.js</h1>
 
     
 
@@ -26,32 +26,56 @@
     
     <section>
         <article>
-            <pre class="prettyprint source linenums"><code>/**
- *  A binary search
- * @param {array} arr 
- * @param {number} target 
+            <pre class="prettyprint source linenums"><code>'use strict';
+
+const Node = require('../node/node');
+/**
+ * @class
  */
-function binarySearch(arr, target) {
-  let right = arr.length - 1;
-  let left = 0;
-
-  while (left &lt;= right) {
-    let m = Math.ceil((left + right) / 2);
-
-    if (arr[m] &lt; target) {
-      left = m + 1;
-    } else if (arr[m] > target) {
-      right = m - 1;
-    } else {
-      return m;
-    }
+class Stack {
+  constructor(){
+    this.top = null;
   }
 
-  return -1;
+  /**
+   * Pushes a value onto the stack
+   * @param {*} val 
+   */
+  push(val){
+    const node = new Node(val);
+    node.next = this.top;
+    this.top = node;
+  }
+
+
+  /**
+   * Removes the top node from the stack and returns its value
+   * @return val
+   */
+  pop(){
+    const node = this.top;
+    this.top = this.top.next;
+    return node.val;
+  }
+
+  /**
+   * Returns the value of the node on top of the stack while leaving the node in position
+   */
+  peek(){
+    return this.isEmpty()? null : this.top.val;
+  }
+
+  /**
+   * Checks to see if the stack is empty
+   * @return bool
+   */
+  isEmpty(){
+    return (this.top === null);
+  }
 }
 
-module.exports = binarySearch;
-</code></pre>
+
+module.exports = Stack;</code></pre>
         </article>
     </section>
 
