@@ -17,6 +17,8 @@
 
 * [03 - Binary Search](./code-challenges/03-BinarySearch/)
 
+* [FIFO Animal Shelter](./code-challenges/FIFOAnimalShelter/)
+
 
 ## Data Structures
 
