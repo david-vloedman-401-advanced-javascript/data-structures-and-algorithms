@@ -16,4 +16,4 @@ Both functions I believe to operate at an O(n) in both time and space.
 
 ![](./assets/animal.jpg)
 
-[Code](./FIFOanimalShelter.js)
+[Code](./FIFOAnimalShelter.js)
