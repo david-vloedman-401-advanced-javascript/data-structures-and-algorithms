@@ -17,6 +17,8 @@
 
 * [FIFO Animal Shelter](./code-challenges/FIFOAnimalShelter/)
 
+* [Multi-bracket Validator](./code-challenges/multi-bracket-validator/)
+
 
 ## Data Structures
 

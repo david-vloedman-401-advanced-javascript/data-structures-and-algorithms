@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Class: Stack</title>
+    <title>JSDoc: Class: MultiBracket</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Class: Stack</h1>
+    <h1 class="page-title">Class: MultiBracket</h1>
 
     
 
@@ -28,7 +28,7 @@
 
 <header>
     
-        <h2><span class="attribs"><span class="type-signature"></span></span>Stack<span class="signature">()</span><span class="type-signature"></span></h2>
+        <h2><span class="attribs"><span class="type-signature"></span></span>MultiBracket<span class="signature">()</span><span class="type-signature"></span></h2>
         
     
 </header>
@@ -41,7 +41,7 @@
     
 
     
-    <h4 class="name" id="Stack"><span class="type-signature"></span>new Stack<span class="signature">()</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="MultiBracket"><span class="type-signature"></span>new MultiBracket<span class="signature">()</span><span class="type-signature"></span></h4>
     
 
     
@@ -89,7 +89,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="data-structures_stack_stack.js.html">data-structures/stack/stack.js</a>, <a href="data-structures_stack_stack.js.html#line8">line 8</a>
+        <a href="code-challenges_multi-bracket-validator_multibracket.js.html">code-challenges/multi-bracket-validator/multibracket.js</a>, <a href="code-challenges_multi-bracket-validator_multibracket.js.html#line9">line 9</a>
     </li></ul></dd>
     
 
@@ -145,300 +145,12 @@
     
 
     
-    <h4 class="name" id="isEmpty"><span class="type-signature"></span>isEmpty<span class="signature">()</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="checkBracket"><span class="type-signature"></span>checkBracket<span class="signature">(char)</span><span class="type-signature"></span></h4>
     
 
     
 
 
-
-<div class="description">
-    Checks to see if the stack is empty
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="data-structures_stack_stack.js.html">data-structures/stack/stack.js</a>, <a href="data-structures_stack_stack.js.html#line48">line 48</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<h5>Returns:</h5>
-
-        
-<div class="param-desc">
-    bool
-</div>
-
-
-
-    
-
-
-
-
-
-        
-            
-
-    
-
-    
-    <h4 class="name" id="peek"><span class="type-signature"></span>peek<span class="signature">()</span><span class="type-signature"></span></h4>
-    
-
-    
-
-
-
-<div class="description">
-    Returns the value of the node on top of the stack while leaving the node in position
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="data-structures_stack_stack.js.html">data-structures/stack/stack.js</a>, <a href="data-structures_stack_stack.js.html#line40">line 40</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
-            
-
-    
-
-    
-    <h4 class="name" id="pop"><span class="type-signature"></span>pop<span class="signature">()</span><span class="type-signature"></span></h4>
-    
-
-    
-
-
-
-<div class="description">
-    Removes the top node from the stack and returns its value
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="data-structures_stack_stack.js.html">data-structures/stack/stack.js</a>, <a href="data-structures_stack_stack.js.html#line27">line 27</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<h5>Returns:</h5>
-
-        
-<div class="param-desc">
-    val
-</div>
-
-
-
-    
-
-
-
-
-
-        
-            
-
-    
-
-    
-    <h4 class="name" id="push"><span class="type-signature"></span>push<span class="signature">(val)</span><span class="type-signature"></span></h4>
-    
-
-    
-
-
-
-<div class="description">
-    Pushes a value onto the stack
-</div>
 
 
 
@@ -473,15 +185,10 @@
 
         <tr>
             
-                <td class="name"><code>val</code></td>
+                <td class="name"><code>char</code></td>
             
 
             <td class="type">
-            
-                
-<span class="param-type">*</span>
-
-
             
             </td>
 
@@ -530,7 +237,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="data-structures_stack_stack.js.html">data-structures/stack/stack.js</a>, <a href="data-structures_stack_stack.js.html#line16">line 16</a>
+        <a href="code-challenges_multi-bracket-validator_multibracket.js.html">code-challenges/multi-bracket-validator/multibracket.js</a>, <a href="code-challenges_multi-bracket-validator_multibracket.js.html#line38">line 38</a>
     </li></ul></dd>
     
 
@@ -555,6 +262,162 @@
 
 
 
+<h5>Returns:</h5>
+<ul>
+        <li>
+<div class="param-desc">
+    bool
+</div>
+
+
+</li>
+    
+        <li>
+<div class="param-desc">
+    null
+</div>
+
+
+</li>
+    </ul>
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="isValid"><span class="type-signature"></span>isValid<span class="signature">(str)</span><span class="type-signature"></span></h4>
+    
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>str</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="code-challenges_multi-bracket-validator_multibracket.js.html">code-challenges/multi-bracket-validator/multibracket.js</a>, <a href="code-challenges_multi-bracket-validator_multibracket.js.html#line20">line 20</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    bool
+</div>
+
+
+
+    
 
 
 

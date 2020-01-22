@@ -22,4 +22,4 @@ Each function scales at O(n) for both time and space.
 
 ## Queues, enqueue, dequeue, peek, and isEmpty
 
-![](./assets/psuedoQueue.jpg)
+![](./assets/pseudoQueue.jpg)
