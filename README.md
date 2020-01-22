@@ -6,7 +6,8 @@
 
 # Docs
 
-[JSDoc](./docs/index.html)
+[JSDocs](./docs/index.html)
+
 
 ## Table of Contents
 
@@ -24,4 +25,6 @@
 * [Stack](./data-structures/stack/)
 
 * [Queue](./data-structures/queue/)
+
+* [PseudoQueue](./data-structures/pseudoQueue)
 

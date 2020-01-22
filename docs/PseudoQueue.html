@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Global</title>
+    <title>JSDoc: Class: PseudoQueue</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Global</h1>
+    <h1 class="page-title">Class: PseudoQueue</h1>
 
     
 
@@ -28,7 +28,7 @@
 
 <header>
     
-        <h2></h2>
+        <h2><span class="attribs"><span class="type-signature"></span></span>PseudoQueue<span class="signature">()</span><span class="type-signature"></span></h2>
         
     
 </header>
@@ -38,161 +38,22 @@
     
         
 
-        
-
-
-<dl class="details">
-
     
 
     
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-        
-    
-    </div>
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-        <h3 class="subsection-title">Methods</h3>
-
-        
-            
-
-    
-
-    
-    <h4 class="name" id="binarySearch"><span class="type-signature"></span>binarySearch<span class="signature">(arr, target)</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="PseudoQueue"><span class="type-signature"></span>new PseudoQueue<span class="signature">()</span><span class="type-signature"></span></h4>
     
 
     
 
 
 
-<div class="description">
-    A binary search
-</div>
 
 
 
 
 
 
-
-
-
-    <h5>Parameters:</h5>
-    
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>arr</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">array</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>target</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">number</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-    </tbody>
-</table>
 
 
 
@@ -228,7 +89,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="code-challenges_03-BinarySearch_binarySearch.js.html">code-challenges/03-BinarySearch/binarySearch.js</a>, <a href="code-challenges_03-BinarySearch_binarySearch.js.html#line6">line 6</a>
+        <a href="data-structures_pseudoQueue_pseudoQueue.js.html">data-structures/pseudoQueue/pseudoQueue.js</a>, <a href="data-structures_pseudoQueue_pseudoQueue.js.html#line8">line 8</a>
     </li></ul></dd>
     
 
@@ -258,13 +119,33 @@
 
 
 
+    
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Methods</h3>
+
         
             
 
     
 
     
-    <h4 class="name" id="mergeLists"><span class="type-signature"></span>mergeLists<span class="signature">(list1, list2)</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="dequeue"><span class="type-signature"></span>dequeue<span class="signature">()</span><span class="type-signature"></span></h4>
     
 
     
@@ -272,7 +153,105 @@
 
 
 <div class="description">
-    Merges two linked lists into one
+    Removes the node from the front of the queue and returns its value
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="data-structures_pseudoQueue_pseudoQueue.js.html">data-structures/pseudoQueue/pseudoQueue.js</a>, <a href="data-structures_pseudoQueue_pseudoQueue.js.html#line23">line 23</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    val
+</div>
+
+
+
+    
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="enqueue"><span class="type-signature"></span>enqueue<span class="signature">(val)</span><span class="type-signature"></span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    Adds a node to the queue with the give value
 </div>
 
 
@@ -308,25 +287,7 @@
 
         <tr>
             
-                <td class="name"><code>list1</code></td>
-            
-
-            <td class="type">
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>list2</code></td>
+                <td class="name"><code>val</code></td>
             
 
             <td class="type">
@@ -378,7 +339,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="data-structures_linked-list_linkedList.js.html">data-structures/linked-list/linkedList.js</a>, <a href="data-structures_linked-list_linkedList.js.html#line120">line 120</a>
+        <a href="data-structures_pseudoQueue_pseudoQueue.js.html">data-structures/pseudoQueue/pseudoQueue.js</a>, <a href="data-structures_pseudoQueue_pseudoQueue.js.html#line16">line 16</a>
     </li></ul></dd>
     
 
