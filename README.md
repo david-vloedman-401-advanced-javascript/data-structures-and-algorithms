@@ -30,3 +30,5 @@
 
 * [PseudoQueue](./data-structures/pseudoQueue)
 
+* [Binary Search Tree](.data-structures/tree)
+

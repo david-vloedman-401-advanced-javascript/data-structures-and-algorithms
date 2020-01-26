@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Source: code-challenges/03-BinarySearch/binarySearch.js</title>
+    <title>JSDoc: Class: BinaryTree</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,43 +17,137 @@
 
 <div id="main">
 
-    <h1 class="page-title">Source: code-challenges/03-BinarySearch/binarySearch.js</h1>
+    <h1 class="page-title">Class: BinaryTree</h1>
 
     
 
 
 
+
+<section>
+
+<header>
     
-    <section>
-        <article>
-            <pre class="prettyprint source linenums"><code>/**
- *  A binary search
- * @param {array} arr 
- * @param {number} target 
- */
-function binarySearch(arr, target) {
-  let right = arr.length - 1;
-  let left = 0;
+        <h2><span class="attribs"><span class="type-signature"></span></span>BinaryTree<span class="signature">()</span><span class="type-signature"></span></h2>
+        
+            <div class="class-description">Binary Tree</div>
+        
+    
+</header>
 
-  while (left &lt;= right) {
-    let m = Math.ceil((left + right) / 2);
+<article>
+    <div class="container-overview">
+    
+        
 
-    if (arr[m] &lt; target) {
-      left = m + 1;
-    } else if (arr[m] > target) {
-      right = m - 1;
-    } else {
-      return m;
-    }
-  }
+    
+    <h2>Constructor</h2>
+    
 
-  return -1;
-}
+    
+    <h4 class="name" id="BinaryTree"><span class="type-signature"></span>new BinaryTree<span class="signature">()</span><span class="type-signature"></span></h4>
+    
 
-module.exports = binarySearch;
-</code></pre>
-        </article>
-    </section>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="data-structures_tree_tree.js.html">data-structures/tree/tree.js</a>, <a href="data-structures_tree_tree.js.html#line51">line 51</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</article>
+
+</section>
 
 
 
