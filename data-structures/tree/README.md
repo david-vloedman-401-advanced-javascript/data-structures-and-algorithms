@@ -1,6 +1,6 @@
 # Code Challege Binary Tree
 
-## Queue
+## Binary Search Tree
 
 ### Create binary tree classes and functionality 
 - Tree Node : TreeNode()
