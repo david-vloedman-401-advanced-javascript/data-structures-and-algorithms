@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Source: code-challenges/FIFOAnimalShelter/FIFOanimalShelter.js</title>
+    <title>JSDoc: Source: code-challenges/FizzBuzz/fizzBuzz.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Source: code-challenges/FIFOAnimalShelter/FIFOanimalShelter.js</h1>
+    <h1 class="page-title">Source: code-challenges/FizzBuzz/fizzBuzz.js</h1>
 
     
 
@@ -28,50 +28,45 @@
         <article>
             <pre class="prettyprint source linenums"><code>'use strict';
 
-const Queue = require('../../data-structures/queue/queue');
 
 /**
- * @class
+ * 
+ * @param {*} val 
+ * @returns string
  */
-class FIFOAnimalShelter {
-  constructor(){
-    this.cats = new Queue();
-    this.dogs = new Queue();
-  }
-  /**
-   * 
-   * @param animal 
-   */
-  enqueue(animal){
-    switch (animal) {
-    case 'dog':
-      this.dogs.enqueue(animal);
-      return;
-    case 'cat':
-      this.cats.enqueue(animal);        
-      break;    
-    default:        
-      break;
-    } 
-  }
-  /** 
-   * @param pref 
-   * @return animal
-   */
-  dequeue(pref){
-    switch (pref) {
-    case 'dog':
-      return this.dogs.dequeue();
-    case 'cat':
-      return this.cats.dequeue();
-    default:
-      return null;
-      
-    }
+function fizzBuzzNode(val) {
+  if (val % 3 === 0 &amp;&amp; val % 5 === 0) {
+    return 'FizzBuzz';
+  } else if (val % 5 === 0) {
+    return 'Buzz';
+  } else if (val % 3 === 0) {
+    return 'Fizz';
+  } else {
+    return val.toString();
   }
 }
+/** 
+ * @param {*} tree 
+ * @returns tree
+ */
+function fizzBuzzTree(tree) {
+  if (!tree) {
+    return 'No tree value';
+  }
+  let recursive = node => {
+    if (node.left) recursive(node.left);
+    node.val = fizzBuzzNode(node.val);
+    if (node.right) recursive(node.right);
+  };
+  recursive(tree.tree.root);
+  return tree;
+}
 
-module.exports = FIFOAnimalShelter;</code></pre>
+module.exports = fizzBuzzTree;
+
+
+
+</code></pre>
         </article>
     </section>
 

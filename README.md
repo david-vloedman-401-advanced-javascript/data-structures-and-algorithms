@@ -19,6 +19,8 @@
 
 * [Multi-bracket Validator](./code-challenges/multi-bracket-validator/)
 
+* [FizzBuzz Tree](./code-challenges/FizzBuzz)
+
 
 ## Data Structures
 
