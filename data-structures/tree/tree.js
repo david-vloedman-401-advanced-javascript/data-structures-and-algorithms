@@ -39,10 +39,8 @@ class TreeNode {
     if (this.left) this.left.inOrder(cb);
     cb(this.val);
     if (this.right) this.right.inOrder(cb);
-  }
+  }  
 }
-
-
 /**
  * Binary Tree
  * @class
