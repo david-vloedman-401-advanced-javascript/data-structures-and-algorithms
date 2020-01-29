@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Source: data-structures/node/node.js</title>
+    <title>JSDoc: Source: code-challenges/MaxValue/maxvalue.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Source: data-structures/node/node.js</h1>
+    <h1 class="page-title">Source: code-challenges/MaxValue/maxvalue.js</h1>
 
     
 
@@ -26,18 +26,37 @@
     
     <section>
         <article>
-            <pre class="prettyprint source linenums"><code>/**
+            <pre class="prettyprint source linenums"><code>'use strict';
+
+const Tree = require('../../data-structures/tree/tree');
+
+/**
  * @class
  */
-class Node {
-  constructor(val, next = null) {
-    this.val = val;
-    this.next = next;
+class MaxTree extends Tree {
+  constructor(){
+    super();
+  }
+  /**
+   * @returns number
+   */
+  maxValue(){
+    let currentHighest = null;
+    this.tree.root.inOrder(val => {
+      if(!currentHighest) currentHighest = val;
+      if(val > currentHighest) currentHighest = val;
+    });
+    return currentHighest;
   }
 }
 
+module.exports = MaxTree;
 
-module.exports = Node;</code></pre>
+
+
+
+
+</code></pre>
         </article>
     </section>
 

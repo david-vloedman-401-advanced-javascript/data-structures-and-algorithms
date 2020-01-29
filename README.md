@@ -23,6 +23,8 @@
 
 * [FizzBuzz Tree](./code-challenges/FizzBuzz/)
 
+* [Max Value Tree](./code-challenges/MaxValue/)
+
 * [Breadth First Tree](./code-challenges/BreadthFirst/)
 
 ## Data Structures
