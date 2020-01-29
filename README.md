@@ -3,9 +3,11 @@
 # Travis-CI 
 [Link](https://www.travis-ci.com/david-vloedman-401-advanced-javascript/data-structures-and-algorithms)
 
+
 # Docs
 
 [JSDocs](./docs/index.html)
+
 
 ## Table of Contents
 
@@ -23,6 +25,7 @@
 
 * [Max Value Tree](./code-challenges/MaxValue/)
 
+* [Breadth First Tree](./code-challenges/BreadthFirst/)
 
 ## Data Structures
 
