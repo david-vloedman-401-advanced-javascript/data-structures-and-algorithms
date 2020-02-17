@@ -23,6 +23,8 @@
 
 * [Max Value Tree](./code-challenges/MaxValue/)
 
+* [Insertion Sort](./code-challenges/insertion-sort/)
+
 
 ## Data Structures
 
