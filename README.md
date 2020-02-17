@@ -27,6 +27,9 @@
 
 * [Breadth First Tree](./code-challenges/BreadthFirst/)
 
+* [Insertion Sort](./code-challenges/insertion-sort/)
+
+
 ## Data Structures
 
 * [Linked List](./data-structures/linked-list/)
