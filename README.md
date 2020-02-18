@@ -29,6 +29,8 @@
 
 * [Insertion Sort](./code-challenges/insertion-sort/)
 
+* [Merge Sort](./code-challenges/merge-sort/)
+
 
 ## Data Structures
 
