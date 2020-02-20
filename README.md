@@ -31,6 +31,8 @@
 
 * [Merge Sort](./code-challenges/merge-sort/)
 
+* [Quick Sort](./code-challenges/quick-sort/)
+
 
 ## Data Structures
 
