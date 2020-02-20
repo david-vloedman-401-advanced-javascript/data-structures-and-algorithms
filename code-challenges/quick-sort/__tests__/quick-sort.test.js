@@ -8,7 +8,7 @@ describe('Testing the merge sort algorithm', () => {
       15,
       16,
       23,
-      42
+      42,
     ]);
   });
 
@@ -19,7 +19,7 @@ describe('Testing the merge sort algorithm', () => {
       8,
       12,
       18,
-      20
+      20,
     ]);
   });
 
