@@ -38,7 +38,8 @@
 
 * [Queue](./data-structures/queue/)
 
-* [PseudoQueue](./data-structures/pseudoQueue)
+* [PseudoQueue](./data-structures/pseudoQueue/)
 
-* [Binary Search Tree](./data-structures/tree)
+* [Binary Search Tree](./data-structures/tree/)
 
+* [Hash Table](./data-structures/hash-table/)
