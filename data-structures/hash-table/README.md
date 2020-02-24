@@ -4,6 +4,8 @@
 
 ### Create linked list functionality 
 
+[Pull Request](https://github.com/david-vloedman-401-advanced-javascript/data-structures-and-algorithms/pull/24)
+
 ### Hash Table
 
 * Hash function attribution to Trevor Thompson
