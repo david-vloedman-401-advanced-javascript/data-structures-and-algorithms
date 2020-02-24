@@ -75,6 +75,7 @@ class HashTable {
 
   add(key, value) {
     if (!key) throw new Error('Invalud key');
+    
     if (this.contains(key)) return 'Duplicate key';
 
     let index = this.hash(key);

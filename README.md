@@ -29,6 +29,8 @@
 
 * [Quick Sort](./code-challenges/quick-sort/)
 
+* [Find First Duplicate Word](./code-challenges/duplicate-words)/
+
 
 ## Data Structures
 
