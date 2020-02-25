@@ -1,6 +1,6 @@
-# Code Challege Find First Duplicate Word
+# Code Challege Tree Intersect
 
-## Find the first duplicate word in a given string
+## Find common values between two binary trees
 
 [Pull Request](https://github.com/david-vloedman-401-advanced-javascript/data-structures-and-algorithms/pull/27)
 
