@@ -25,4 +25,5 @@ Each function scales at O(1) for both time and space.
 
 ![](./assets/hashtable.jpg)
 ![](./assets/pseudo.jpg)
+![](./assets/code.jpg)
 
