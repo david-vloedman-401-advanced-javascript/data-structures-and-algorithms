@@ -33,7 +33,9 @@
 
 * [Quick Sort](./code-challenges/quick-sort/)
 
-* [Find First Duplicate Word](./code-challenges/duplicate-words)/
+* [Find First Duplicate Word](./code-challenges/duplicate-words)
+
+* [Tree Intersection](./code-challenges/tree-intersection)
 
 
 ## Data Structures
