@@ -65,7 +65,7 @@ class HashTable {
     this.size = size || 5;
     this.buckets = new Array(this.size);
   }
-/**
+  /**
  * Hashes the given key
  * @param {*} key 
  * @returns key
@@ -79,7 +79,7 @@ class HashTable {
       this.size
     );
   }
-/**
+  /**
  * Adds a key value pair to the table
  * @param {*} key 
  * @param {*} value 

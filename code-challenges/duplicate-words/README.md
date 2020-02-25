@@ -13,6 +13,7 @@ I believe the function scales at O(n) for both time and space.
 [Code](./duplicate-words.js)
 
 ![](./assets/duplicates.jpg)
+![](./assets/whiteboard2.jpg)
 
 
 
