@@ -1,7 +1,11 @@
 'use strict';
 
 const HashMap = require('../../data-structures/hash-table/hash-table');
-
+/**
+ * Finds the first word to be duplicated in a given string
+ * @param {*} str 
+ * @returns str
+ */
 const firstDuplicateWord = str => {
   if (!str) return 'Invalid input';
   const map = new HashMap();

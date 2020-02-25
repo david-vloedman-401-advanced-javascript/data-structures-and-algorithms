@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Source: data-structures/node/node.js</title>
+    <title>JSDoc: Source: code-challenges/duplicate-words/duplicate-words.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Source: data-structures/node/node.js</h1>
+    <h1 class="page-title">Source: code-challenges/duplicate-words/duplicate-words.js</h1>
 
     
 
@@ -26,18 +26,31 @@
     
     <section>
         <article>
-            <pre class="prettyprint source linenums"><code>/**
- * @class
+            <pre class="prettyprint source linenums"><code>'use strict';
+
+const HashMap = require('../../data-structures/hash-table/hash-table');
+/**
+ * Finds the first word to be duplicated in a given string
+ * @param {*} str 
+ * @returns str
  */
-class Node {
-  constructor(val, next = null) {
-    this.val = val;
-    this.next = next;
+const firstDuplicateWord = str => {
+  if (!str) return 'Invalid input';
+  const map = new HashMap();
+  const words = str.match(/\b\w+\b/g);
+  for (let i = 0; i &lt; words.length; i++) {
+    let value = words[i];
+    let key = value;
+    if (map.contains(value)) {
+      return value;
+    }
+    map.add(key, value);
   }
-}
+  return 'No Duplicate Words Found';
+};
 
 
-module.exports = Node;</code></pre>
+module.exports = firstDuplicateWord;</code></pre>
         </article>
     </section>
 
