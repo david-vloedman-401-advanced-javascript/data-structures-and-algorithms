@@ -24,4 +24,5 @@ Each function scales at O(1) for both time and space.
 [Code](./hash-table.js)
 
 ![](./assets/hashtable.jpg)
+![](./assets/pseudo.jpg)
 
