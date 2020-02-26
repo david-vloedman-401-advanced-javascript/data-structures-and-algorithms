@@ -71,8 +71,9 @@ class HashTable {
  * @returns key
  */
   hash(key) {
+    const str = key.toString();
     return (
-      (key.split('').reduce((p, n) => {
+      (str.split('').reduce((p, n) => {
         return p + n.charCodeAt(0);
       }, 0) *
         599) %
