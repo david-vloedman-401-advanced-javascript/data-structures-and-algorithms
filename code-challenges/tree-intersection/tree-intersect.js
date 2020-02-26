@@ -169,7 +169,7 @@ tree2.add(1);
 
 
 console.log(tree1);
-console.log(tree2)
+console.log(tree2);
 
 console.log(treeIntersect(tree1, tree2));
 
