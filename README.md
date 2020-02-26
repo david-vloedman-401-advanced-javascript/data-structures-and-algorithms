@@ -37,6 +37,8 @@
 
 * [Tree Intersection](./code-challenges/tree-intersection)
 
+* [Left Join](./code-challenges/left-join/)
+
 
 ## Data Structures
 
