@@ -1,7 +1,7 @@
 'use strict';
 
-let treeIntersect = require('../treeIntersection');
-let { BinarySearchTree } = require('../../../data-structures/tree/tree');
+let {treeIntersect, BinarySearchTree}  = require('../tree-intersect');
+
 
 describe('treeIntersection(tree1, tree2)', () => {
   let tree1;
