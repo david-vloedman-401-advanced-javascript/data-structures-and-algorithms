@@ -3,10 +3,12 @@
 const HashTable = require('../../data-structures/hash-table/hash-table');
 
 function leftJoin(left, right){
+
+  if(!(left instanceof  HashTable) || !(right instanceof  HashTable)) return 1;
+
   const joinedData = [];
 
-  left.buckets.forEach(bucket => {
-    //console.log(bucket.head.value);
+  left.buckets.forEach(bucket => {    
     let key = bucket.head.value[0];
     right.contains(key) ? joinedData.push([...bucket.head.value, right.get(key)]) : joinedData.push(bucket.head.value);    
   });
@@ -14,16 +16,4 @@ function leftJoin(left, right){
   return joinedData;
 }
 
-
-const table = new HashTable();
-const table1 = new HashTable();
-
-table.add('david', 'vloedman');
-table.add('gloria', 'rockwell');
-table.add('trevor', 'thompson');
-
-table1.add('david', 'other table');
-table1.add('gloria', 'other other');
-table1.add('turtle', 'should not be');
-
-console.log(leftJoin(table, table1));
+module.exports = leftJoin;
