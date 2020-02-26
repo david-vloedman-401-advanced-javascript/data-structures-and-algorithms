@@ -124,7 +124,7 @@ class HashTable {
     let index = this.hash(key);
 
     if (!this.buckets[index]) {
-      return null;
+      return false;
     }
 
     return this.buckets[index].getKey(key);
