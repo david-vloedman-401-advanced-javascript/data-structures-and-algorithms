@@ -10,7 +10,7 @@ I believe the function scales at O(n) for both time and space.
 
 ## Solution
 
-[Code](./assets/code.jpg)
+![](./assets/code.jpg)
 
 ![](./assets/intersect1.jpg)
 ![](./assets/intersect2.jpg)
