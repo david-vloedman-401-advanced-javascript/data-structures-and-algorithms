@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Source: data-structures/tree/tree.js</title>
+    <title>JSDoc: Source: data-structures/graph/graph.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Source: data-structures/tree/tree.js</h1>
+    <h1 class="page-title">Source: data-structures/graph/graph.js</h1>
 
     
 
@@ -26,129 +26,86 @@
     
     <section>
         <article>
-            <pre class="prettyprint source linenums"><code>'use strict';
-
-/**
- * TreeNode
- * @class
+            <pre class="prettyprint source linenums"><code>/**
+ * @class Graph
+ * 
  */
-class TreeNode {
-  constructor(val = null) {
-    this.val = val;
-    this.left = null;
-    this.right = null;
-  }
-
-  /**
-   *
-   * @param cb
-   */
-  preOrder(cb) {   
-    cb(this.val);
-    if (this.left) this.left.preOrder(cb);
-    if (this.right) this.right.preOrder(cb);
-  }
-
-  /**
-   *
-   * @param cb
-   */
-  postOrder(cb) {
-    if (this.left) this.left.postOrder(cb);
-    if (this.right) this.right.postOrder(cb);
-    cb(this.val);
-  }
-
-  /**
-   *
-   * @param cb
-   */
-  inOrder(cb) {
-    if (this.left) this.left.inOrder(cb);
-    cb(this.val);
-    if (this.right) this.right.inOrder(cb);
-  }  
-}
-/**
- * Binary Tree
- * @class
- */
-class BinaryTree {
+class Graph {
   constructor() {
-    this.root = new TreeNode();
+    this.adjList = new Map();
   }
-}
-
-class BinarySearchTree {
-  constructor(tree = new BinaryTree()) {
-    this.tree = tree;
-  }
-
   /**
-   * 
-   * @param val 
+   * Add a vertex to the grid
+   * @param {*} vertex 
+   * @returns number
    */
-  add(val){    
-    this.getPosition(this.tree.root, val);
-  }
-
-  /**
-   * 
-   * @param  root 
-   * @param  val 
-   */
-  getPosition(root, val){
-    
-    if(!root.val) {      
-      root.val = val;      
+  addVertex(vertex) {
+    if (!this.adjList.has(vertex)) {
+      this.adjList.set(vertex, []);
+      return 0;
     } else {
-      
-      if(root.val &lt; val){
-        if(!root.right) root.right = new TreeNode(val);
-        else{ 
-          this.getPosition(root.right, val);
-        }
-      } else {
-        if(!root.left) root.left = new TreeNode(val);
-        else{
-          this.getPosition(root.left, val);
-        }         
-      }
+      return 1;
     }
   }
-
   /**
-   * 
-   * @param val 
-   * @returns bool
+   * Add an edge between two vertices 
+   * @param {*} vertex 
+   * @param {*} node 
+   * @returns number
    */
-  contains(val){
-    
-    return this.search(this.tree.root, val);
+  addEdge(vertex, node) {
+    if (this.adjList.has(vertex)) {
+      if (this.adjList.has(node)) {
+        let arr = this.adjList.get(vertex);
+        if (!arr.includes(node)) {
+          arr.push(node);
+        }
+      } else {
+        return 1;
+      }
+    } else {
+      return 1;
+    }
   }
   /**
-   * 
-   * @param  root 
-   * @param  val 
-   * @returns func
+   * Gets all the nodes in the graph
+   * @returns nodes
    */
-  search(root, val){  
-    if(root.val === val) return true;  
-    if(root.val &lt; val){
-      if(!root.right) return false;
-      return this.search(root.right, val);
-    } 
-    if(!root.left) return false;
-    return this.search(root.left, val);
+  getNodes(){
+    if(this.adjList.size === 0) return null;
+    const nodes = [];
+    for (let [key, value] of this.adjList){
+      nodes.push(key);
+    }
+    return nodes;
+  }
+  /**
+   * Returns all neighbors of a given node
+   * @param {*} node 
+   * @return ndoes
+   */
+  getNeighbors(node){
+    if(!this.adjList.has(node)) return 1;
+    return this.adjList.get(node);
+  }
+  /**
+   * Returns the count of vertices within the graph
+   * @return size
+   */
+  size(){
+    return this.adjList.size;
+  }
+  /**
+   * Print the nodes with their edges in list form
+   */
+  print() {
+    for (let [key, value] of this.adjList) {
+      console.log(key, value);
+    }
   }
 }
 
-
-module.exports = BinarySearchTree;
-
-
-
-
+module.exports = Graph;
 
 </code></pre>
         </article>
