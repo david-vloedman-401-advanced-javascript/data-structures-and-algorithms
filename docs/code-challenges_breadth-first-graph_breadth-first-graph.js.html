@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Source: data-structures/tree/tree.js</title>
+    <title>JSDoc: Source: code-challenges/breadth-first-graph/breadth-first-graph.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Source: data-structures/tree/tree.js</h1>
+    <h1 class="page-title">Source: code-challenges/breadth-first-graph/breadth-first-graph.js</h1>
 
     
 
@@ -26,125 +26,57 @@
     
     <section>
         <article>
-            <pre class="prettyprint source linenums"><code>'use strict';
-
+            <pre class="prettyprint source linenums"><code>const Graph = require('../../data-structures/graph/graph');
 /**
- * TreeNode
- * @class
+ * @class BreadthFirst
  */
-class TreeNode {
-  constructor(val = null) {
-    this.val = val;
-    this.left = null;
-    this.right = null;
-  }
-
-  /**
-   *
-   * @param cb
-   */
-  preOrder(cb) {   
-    cb(this.val);
-    if (this.left) this.left.preOrder(cb);
-    if (this.right) this.right.preOrder(cb);
-  }
-
-  /**
-   *
-   * @param cb
-   */
-  postOrder(cb) {
-    if (this.left) this.left.postOrder(cb);
-    if (this.right) this.right.postOrder(cb);
-    cb(this.val);
-  }
-
-  /**
-   *
-   * @param cb
-   */
-  inOrder(cb) {
-    if (this.left) this.left.inOrder(cb);
-    cb(this.val);
-    if (this.right) this.right.inOrder(cb);
-  }  
-}
-/**
- * Binary Tree
- * @class
- */
-class BinaryTree {
+class BreadthFirst extends Graph {
   constructor() {
-    this.root = new TreeNode();
+    super();
   }
-}
-
-class BinarySearchTree {
-  constructor(tree = new BinaryTree()) {
-    this.tree = tree;
-  }
-
   /**
-   * 
-   * @param val 
+   * Create a checklist for visited items
+   * @returns arr
    */
-  add(val){    
-    this.getPosition(this.tree.root, val);
+  createVisitedObject() {
+    let arr = {};
+    for (let key of this.adjList.keys()) {
+      arr[key] = false;
+    }
+    return arr;
   }
-
   /**
-   * 
-   * @param  root 
-   * @param  val 
+   * Traverse graph breadth-first
+   * @param startingNode 
    */
-  getPosition(root, val){
+  breadthFirst(startingNode) {
+    let visited = this.createVisitedObject();
+    let q = [];
+    const nodes = [];
     
-    if(!root.val) {      
-      root.val = val;      
-    } else {
-      
-      if(root.val &lt; val){
-        if(!root.right) root.right = new TreeNode(val);
-        else{ 
-          this.getPosition(root.right, val);
+    visited[startingNode] = true;
+    q.push(startingNode);
+
+    while (q.length) {
+      let current = q.pop();
+      nodes.push(current);
+
+      let arr = this.adjList.get(current);
+      if(!arr) return [];
+      for (let elem of arr) {
+        if (!visited[elem]) {
+          visited[elem] = true;
+          q.unshift(elem);
         }
-      } else {
-        if(!root.left) root.left = new TreeNode(val);
-        else{
-          this.getPosition(root.left, val);
-        }         
       }
     }
-  }
-
-  /**
-   * 
-   * @param val 
-   * @returns bool
-   */
-  contains(val){
-    
-    return this.search(this.tree.root, val);
-  }
-  /**
-   * 
-   * @param  root 
-   * @param  val 
-   * @returns func
-   */
-  search(root, val){  
-    if(root.val === val) return true;  
-    if(root.val &lt; val){
-      if(!root.right) return false;
-      return this.search(root.right, val);
-    } 
-    if(!root.left) return false;
-    return this.search(root.left, val);
-  }
+    return nodes;
+  }  
 }
 
+module.exports = BreadthFirst;
 
-module.exports = BinarySearchTree;
+
 
 
 

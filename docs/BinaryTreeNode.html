@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Source: code-challenges/FizzBuzz/fizzBuzz.js</title>
+    <title>JSDoc: Class: BinaryTreeNode</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,58 +17,137 @@
 
 <div id="main">
 
-    <h1 class="page-title">Source: code-challenges/FizzBuzz/fizzBuzz.js</h1>
+    <h1 class="page-title">Class: BinaryTreeNode</h1>
 
     
 
 
 
+
+<section>
+
+<header>
     
-    <section>
-        <article>
-            <pre class="prettyprint source linenums"><code>'use strict';
+        <h2><span class="attribs"><span class="type-signature"></span></span>BinaryTreeNode<span class="signature">()</span><span class="type-signature"></span></h2>
+        
+    
+</header>
 
+<article>
+    <div class="container-overview">
+    
+        
 
-/**
- * 
- * @param {*} val 
- * @returns string
- */
-function fizzBuzzNode(val) {
-  if (val % 3 === 0 &amp;&amp; val % 5 === 0) {
-    return 'FizzBuzz';
-  } else if (val % 5 === 0) {
-    return 'Buzz';
-  } else if (val % 3 === 0) {
-    return 'Fizz';
-  } else {
-    return val.toString();
-  }
-}
-/** 
- * @param {*} tree 
- * @returns tree
- */
-function fizzBuzzTree(tree) {
-  if (!tree) {
-    return 'No tree value';
-  }
-  let recursive = node => {
-    if (node.left) recursive(node.left);
-    node.val = fizzBuzzNode(node.val);
-    if (node.right) recursive(node.right);
-  };
-  recursive(tree.tree.root);
-  return tree;
-}
+    
 
-module.exports = fizzBuzzTree;
+    
+    <h4 class="name" id="BinaryTreeNode"><span class="type-signature"></span>new BinaryTreeNode<span class="signature">()</span><span class="type-signature"></span></h4>
+    
+
+    
 
 
 
-</code></pre>
-        </article>
-    </section>
+<div class="description">
+    Node to be inserted into Binary Tree
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="code-challenges_tree-intersection_tree-intersect.js.html">code-challenges/tree-intersection/tree-intersect.js</a>, <a href="code-challenges_tree-intersection_tree-intersect.js.html#line37">line 37</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</article>
+
+</section>
 
 
 
