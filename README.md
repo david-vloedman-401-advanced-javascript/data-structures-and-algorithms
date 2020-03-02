@@ -39,7 +39,7 @@
 
 * [Left Join](./code-challenges/left-join/)
 
-* [Breadth First Graph](./code-challenges/breadth-first-graph.js)
+* [Breadth First Graph](./code-challenges/breadth-first-graph)
 
 
 ## Data Structures
