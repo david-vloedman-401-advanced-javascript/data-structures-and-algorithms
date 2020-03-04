@@ -25,12 +25,12 @@ class Graph {
    * @param {*} node 
    * @returns number
    */
-  addEdge(vertex, node) {
+  addEdge(vertex, node, weight) {
     if (this.adjList.has(vertex)) {
       if (this.adjList.has(node)) {
         let arr = this.adjList.get(vertex);
         if (!arr.includes(node)) {
-          arr.push(node);
+          arr.push({node, weight});
         }
       } else {
         return 1;
@@ -75,7 +75,35 @@ class Graph {
       console.log(key, value);
     }
   }
+  /**
+   * Returns an edge between the given vertices 
+   * @returns edge
+   * @param {*} first 
+   * @param {*} second 
+   */
+  getEdge(first, second){
+    const bucket = this.adjList.get(first);
+    
+    if(bucket.lengh === 0) return null;
+    let edge = null;
+    bucket.forEach(e => {      
+      if(e.node === second) edge = e;
+    });
+    return edge || false;
+  }
 }
+
+// const graph = new Graph();
+
+// graph.addVertex(1);
+// graph.addVertex(2);
+// graph.addVertex(3);
+
+// graph.addEdge(1, 2, 40);
+
+// console.log(graph.adjList);
+
+// console.log(graph.getEdge(1, 2));
 
 module.exports = Graph;
 
