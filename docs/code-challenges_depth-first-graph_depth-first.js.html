@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Source: data-structures/stack/stack.js</title>
+    <title>JSDoc: Source: code-challenges/depth-first-graph/depth-first.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Source: data-structures/stack/stack.js</h1>
+    <h1 class="page-title">Source: code-challenges/depth-first-graph/depth-first.js</h1>
 
     
 
@@ -26,60 +26,47 @@
     
     <section>
         <article>
-            <pre class="prettyprint source linenums"><code>'use strict';
+            <pre class="prettyprint source linenums"><code>const Graph = require('../breadth-first-graph/breadth-first-graph');
 
-const Node = require('../node/node');
-/**
- * @class
- */
-class Stack {
+class DepthFirst extends Graph {
   constructor(){
-    this.top = null;
+    super();
+    this.dfNodes = [];
   }
-
   /**
-   * Pushes a value onto the stack
-   * @param {*} val 
+   * Depth first traversal extension of graph
+   * @param {*} startingNode 
+   * @returns nodes
    */
-  push(val){
-    const node = new Node(val);
-    node.next = this.top;
-    this.top = node;
+  depthFirst(startingNode) {
+    this.dfNodes = [];
+    let visited = this.createVisitedObject();
+    this._depthFirst(startingNode, visited);
+    return this.dfNodes;
   }
-
-
   /**
-   * Removes the top node from the stack and returns its value
-   * @return val
+   * recursive helper for depthFirst
+   * @param {*} startingNode 
+   * @param {*} visited 
    */
-  pop(){
-    const node = this.top;
-
-    if(!this.top){
-      return null;
-    }
-    this.top = this.top.next;
-    return node.val;
-  }
-
-  /**
-   * Returns the value of the node on top of the stack while leaving the node in position
-   */
-  peek(){
-    return this.isEmpty()? null : this.top.val;
-  }
-
-  /**
-   * Checks to see if the stack is empty
-   * @return bool
-   */
-  isEmpty(){
-    return (this.top === null);
-  }
+  _depthFirst(startingNode, visited) {
+    visited[startingNode] = true;   
+    this.dfNodes.push(startingNode);    
+    let arr = this.adjList.get(startingNode);
+    if(!arr) return;
+    for (let elem of arr) {      
+      if (!visited[elem.node]) {
+        this._depthFirst(elem.node, visited);
+      }
+    }    
+  }  
 }
 
 
-module.exports = Stack;</code></pre>
+module.exports = DepthFirst;
+
+
+</code></pre>
         </article>
     </section>
 

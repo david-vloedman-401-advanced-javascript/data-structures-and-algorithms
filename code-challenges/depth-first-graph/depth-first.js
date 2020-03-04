@@ -5,12 +5,22 @@ class DepthFirst extends Graph {
     super();
     this.dfNodes = [];
   }
+  /**
+   * Depth first traversal extension of graph
+   * @param {*} startingNode 
+   * @returns nodes
+   */
   depthFirst(startingNode) {
     this.dfNodes = [];
     let visited = this.createVisitedObject();
     this._depthFirst(startingNode, visited);
     return this.dfNodes;
   }
+  /**
+   * recursive helper for depthFirst
+   * @param {*} startingNode 
+   * @param {*} visited 
+   */
   _depthFirst(startingNode, visited) {
     visited[startingNode] = true;   
     this.dfNodes.push(startingNode);    

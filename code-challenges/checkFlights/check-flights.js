@@ -1,6 +1,11 @@
 const Graph = require('../../data-structures/graph/graph');
 
-
+/**
+ * 
+ * @param {*} destinations 
+ * @param {*} graph 
+ * @returns isDirect, total
+ */
 function checkFlights(destinations, graph){
   let isDirect = true;
   let total = 0;
