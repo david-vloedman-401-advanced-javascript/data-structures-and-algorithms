@@ -1,7 +1,7 @@
 const Graph = require('../breadth-first-graph');
 
 
-describe('Testing the breadth first traversal method', ()=> {
+xdescribe('Testing the breadth first traversal method', ()=> {
   it('should return an array of nodes in the order they were traversed', ()=>{
     const graph = new Graph();
     graph.addVertex(1);

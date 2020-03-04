@@ -89,7 +89,7 @@ class Graph {
     bucket.forEach(e => {      
       if(e.node === second) edge = e;
     });
-    return edge || false;
+    return edge;
   }
 }
 

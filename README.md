@@ -41,6 +41,8 @@
 
 * [Breadth First Graph](./code-challenges/breadth-first-graph.js)
 
+* [Get Edge (Check Flights)](./code-challenges/checkFlights)
+
 
 ## Data Structures
 

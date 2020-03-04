@@ -2,7 +2,7 @@
 
 const Graph = require('../graph');
 
-describe('Testing the graph data structure', ()=>{
+xdescribe('Testing the graph data structure', ()=>{
 
   // beforeAll(()=>{
   //   const graph = new Graph();
